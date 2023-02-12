@@ -77,8 +77,8 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/config/permissions/org.lineageos.android.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.android.xml
 
 # Enforce privapp-permissions whitelist
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    #ro.control_privapp_permissions=enforce
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool_ab.sh \
@@ -184,7 +184,7 @@ PRODUCT_COPY_FILES += \
 
 # Gapps
 ifeq ($(BLISS_BUILD_VARIANT), gapps)
-$(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 # Plugins
