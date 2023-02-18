@@ -211,3 +211,6 @@ ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
 endif
+
+# Pixel Framework
+$(call inherit-product, vendor/pixel-framework/config.mk)
