@@ -214,3 +214,9 @@ endif
 
 # Pixel Framework
 $(call inherit-product, vendor/pixel-framework/config.mk)
+
+ifneq ($(TARGET_FLATTEN_APEX), true)
+$(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules.mk)
+else
+$(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules_flatten_apex.mk)
+endif
